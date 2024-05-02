@@ -1,0 +1,51 @@
+
+.img-hover {
+    transition: .6s;
+}
+.img-hover:hover {
+    transform: scale(1.03);
+    transition: .6s all;
+    cursor: pointer;
+    filter: contrast(1.2);
+}
+
+a.hover-1 {
+    position: relative;
+    color: white!important;
+}
+
+a.hover-1:hover {
+    color: green!important;
+}
+
+
+a.hover-1:hover::before {
+    content: '';
+    position: absolute;
+    animation: hover-1 5s infinite;
+    top: 35px;
+    width: 106px;
+    height: 2px;
+    background-color: green!important;
+    transition: .5s all;
+}
+
+@keyframes hover-1 {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 106px;
+        height: 2px;
+    }
+    75% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+
+}
